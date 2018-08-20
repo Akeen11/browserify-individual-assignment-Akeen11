@@ -1,21 +1,24 @@
 const DataManager = require("./dataManager")
 const listPlaces = require("./listPlaces")
-const placeFormManager = require("./placesForm")
+const FormManager = require("./placesForm")
 const $ = require("jquery")
 
-$("#placeForm").html(placeFormManager.renderPlaceForm())
+$("#placeForm").html(FormManager.renderPlaceForm())
+listPlaces()
 
-$("#placeList").on("click", "savePlaceButton", event => {
+$("#savePlaceButton").on("click", () => {
     const newPlace = { 
         location: $("#placeLocation").val(),
         date: $("#placeDate").val(),
     }
 
     DataManager.savePlace(newPlace).then(() => {
-        placeFormManager.clearForm()
+        FormManager.clearForm()
 
-        $("placeList").html("")
+        $("#placeList").html("")
         listPlaces()
     })
 })
+
+
 

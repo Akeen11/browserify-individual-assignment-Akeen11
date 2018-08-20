@@ -1,7 +1,7 @@
 const APIManager = Object.create(null, {
     savePlace: {
         value: (place) => {
-            return fetch("http://localhost:8088/place", {
+            return fetch("http://localhost:8088/places", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -13,12 +13,12 @@ const APIManager = Object.create(null, {
     },
     getPlace: {
         value: () => {
-            return fetch("http://localhost:8088/place").then(r => r.json())
+            return fetch("http://localhost:8088/places").then(r => r.json())
         }
     },
     deletePlace: {
         value: (id) => {
-            return fetch(`http://localhost:8088/place/${id}`, {
+            return fetch(`http://localhost:8088/places/${id}`, {
                 method: "DELETE"
             })
                 .then(r => r.json())

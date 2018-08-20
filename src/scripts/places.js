@@ -1,13 +1,13 @@
 const createPlace = (location, date, id) => {
     return `
     <article>
-        <section>
+        <h2>
             ${location}
-        </section>
+        </h2>
         <section>
             <time>${date}</time>
         </section>
-        <button id="deleteEventButton--${id}" class="event__delete">Delete Event</button>
+        <button id="deletePlaceButton--${id}" class="place__delete">Delete Place</button>
     </fieldset>
     `
 }
