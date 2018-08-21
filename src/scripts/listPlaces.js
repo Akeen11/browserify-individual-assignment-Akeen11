@@ -7,7 +7,7 @@ listPlace = () => {
         .then(results => {
             $("#placeList").empty()
             results.forEach(place => {
-                let placeComponent = createPlace(place.location, place.date)
+                let placeComponent = createPlace(place.location, place.date, place.id)
                 writePlacesToDOM(placeComponent)
             })
         });
