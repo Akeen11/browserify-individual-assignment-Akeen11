@@ -10,15 +10,16 @@ const FormManager = Object.create(null, {
     renderPlaceForm: {
         value: () => {
             return `
-            <h2>Places</h2>
-            <div>
+            <h2 id="formHeader">Places</h2>
+
                 <label for="placeLocation">Location:</label>
                 <input required type="text" id="placeLocation">
+
                 <label for="placeDate">Date:</label>
                 <input required type="date" id="placeDate">
+
                 <button id="savePlaceButton" class="place__save">Save Place</button>
-            </div>
-            
+
             `
         }
     }

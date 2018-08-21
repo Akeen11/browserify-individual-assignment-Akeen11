@@ -13,7 +13,7 @@ const APIManager = Object.create(null, {
     },
     getPlace: {
         value: () => {
-            return fetch("http://localhost:8088/places").then(r => r.json())
+            return fetch("http://localhost:8088/places?_order=desc&_sort=id").then(r => r.json())
         }
     },
     deletePlace: {

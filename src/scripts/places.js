@@ -1,15 +1,22 @@
 const createPlace = (location, date, id) => {
     return `
-    <article>
+    <div id="newPlace" class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://loremflickr.com/320/240/brazil,rio?random=1" alt="Card image cap">
+        <div class="card-body">
         <h2>
-            ${location}
+            Location: ${location}
         </h2>
         <section>
             <time>${date}</time>
         </section>
-        <button id="deletePlaceButton--${id}" class="place__delete">Delete Place</button>
-    </fieldset>
+        </div>
+        <button id="deletePlaceButton--${id}" class="placeDelete">Delete Place</button>
+
+    </div>
     `
 }
 
 module.exports = createPlace
+
+
+
