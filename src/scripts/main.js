@@ -8,7 +8,7 @@ listPlaces()
 
 $("#savePlaceButton").on("click", () => {
     const newPlace = {
-            location: $("#placeLocation").val(),
+        location: $("#placeLocation").val(),
         date: $("#placeDate").val(),
     }
 
