@@ -8,7 +8,7 @@ listPlaces()
 
 $("#savePlaceButton").on("click", () => {
     const newPlace = {
-        location: $("#placeLocation").val(),
+            location: $("#placeLocation").val(),
         date: $("#placeDate").val(),
     }
 
@@ -23,7 +23,6 @@ $("#savePlaceButton").on("click", () => {
 $("#placeList").on("click", evt => {
     if (evt.target.classList.contains("placeDelete")) {
         const id = parseInt(evt.target.id.split("--")[1])
-        console.log("id", id)
         DataManager.deletePlace(id)
             .then(() => {
                 $("#placeList").empty()

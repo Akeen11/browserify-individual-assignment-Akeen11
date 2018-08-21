@@ -10,8 +10,8 @@ const FormManager = Object.create(null, {
     renderPlaceForm: {
         value: () => {
             return `
-            <h2>Places</h2>
-            <fieldset>
+            <h2 id="formHeader">Places</h2>
+
                 <label for="placeLocation">Location:</label>
                 <input required type="text" id="placeLocation">
 
@@ -19,8 +19,7 @@ const FormManager = Object.create(null, {
                 <input required type="date" id="placeDate">
 
                 <button id="savePlaceButton" class="place__save">Save Place</button>
-            </fieldset>
-            
+
             `
         }
     }

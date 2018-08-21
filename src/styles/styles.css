@@ -1,0 +1,12 @@
+body {
+    background-image: url("https://picsum.photos/g/200/300/?random")
+}
+
+label, #formHeader, #pageHeader {
+    color: white
+}
+
+#placeList {
+    flex-wrap: wrap;
+    display: flex;
+}
