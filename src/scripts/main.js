@@ -7,7 +7,7 @@ $("#placeForm").html(FormManager.renderPlaceForm())
 listPlaces()
 
 $("#savePlaceButton").on("click", () => {
-    const newPlace = { 
+    const newPlace = {
         location: $("#placeLocation").val(),
         date: $("#placeDate").val(),
     }
@@ -15,10 +15,24 @@ $("#savePlaceButton").on("click", () => {
     DataManager.savePlace(newPlace).then(() => {
         FormManager.clearForm()
 
-        $("#placeList").html("")
+        $("#placeList").empty()
         listPlaces()
     })
 })
 
+$("#placeList").on("click", evt => {
+    if (evt.target.classList.contains("placeDelete")) {
+        const id = parseInt(evt.target.id.split("--")[1])
+        console.log("id", id)
+        DataManager.deletePlace(id)
+            .then(() => {
+                $("#placeList").empty()
+            })
+            .then(() => {
+                listPlaces()
+            }
+            )
+    }
+})
 
 

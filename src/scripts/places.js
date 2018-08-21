@@ -1,5 +1,6 @@
 const createPlace = (location, date, id) => {
     return `
+    <fieldset>
     <article>
         <h2>
             ${location}
@@ -7,7 +8,7 @@ const createPlace = (location, date, id) => {
         <section>
             <time>${date}</time>
         </section>
-        <button id="deletePlaceButton--${id}" class="place__delete">Delete Place</button>
+        <button id="deletePlaceButton--${id}" class="placeDelete">Delete Place</button>
     </fieldset>
     `
 }
